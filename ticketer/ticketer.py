@@ -16,6 +16,7 @@ class Ticketer(commands.Cog):
             "open_category": None,
             "current_ticket": 0,
             "role": None,
+            "bot_role": None,
             "message": "Your ticket has been created. You can add information by typing in this channel. \n\nA member of the ticket-handling-team will be with you as soon as they can.",
             "active": [],
             "modlog": True,
