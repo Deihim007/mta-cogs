@@ -52,6 +52,12 @@ class Ticketer(commands.Cog):
         await self.config.guild(ctx.guild).role.set(role.id)
         await ctx.send(f"Ticket manager role has been set to {role.mention}.")
 
+    @ticketer.command()
+    async def botrole(self, ctx, role: discord.Role):
+        """Set the bot role for ticket managers."""
+        await self.config.guild(ctx.guild).bot_role.set(role.id)
+        await ctx.send(f"Ticket manager bot role has been set to {role.mention}.")
+
     @ticketer.group()
     async def category(self, ctx):
         """Set the categories for open and closed tickets."""
@@ -188,6 +194,13 @@ class Ticketer(commands.Cog):
                         attach_files=True,
                         manage_messages=True,
                     ),
+                    ctx.guild.get_role(settings["bot_role"]): discord.PermissionOverwrite(
+                        read_messages=True,
+                        send_messages=True,
+                        embed_links=True,
+                        attach_files=True,
+                        manage_messages=True,
+                    ),
                 }
                 ticketchannel = await ctx.guild.create_text_channel(
                     name,
@@ -311,7 +324,11 @@ class Ticketer(commands.Cog):
             count += 1
         else:
             await ctx.send("Ticket manager role not set up yet.")
-        if count == 4:
+        if settings["bot_role"]:
+            count += 1
+        else:
+            await ctx.send("Ticket bot role not set up yet.")
+        if count == 5:
             return True
         else:
             return False
