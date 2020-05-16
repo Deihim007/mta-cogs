@@ -17,9 +17,8 @@ class Stats(commands.Cog):
         """Shows MTA's online players count"""
         total = 0
         start = time.time()
-        end = time.time()
-        took = end - start
         servers = fetch_data()
+        took = time.time() - start
         for server in servers:
             total += server.playersCount 
         await ctx.channel.send("There are currently "+str(total)+" players online! Timing: "+str(took))
