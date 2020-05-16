@@ -1,0 +1,11 @@
+{
+  "author": ["Deihim007"],
+  "install_msg": "",
+  "name": "wiki",
+  "disabled": false,
+  "short": "MTA:SA Stats cog.",
+  "description": "Stats cog for Multi Theft Auto",
+  "tags": [],
+  "requirements": [],
+  "hidden": false
+}
