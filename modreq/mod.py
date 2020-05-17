@@ -1,8 +1,3 @@
-import asyncio
-import logging
-from datetime import datetime, timedelta
-from typing import Optional
-
 import discord
 from redbot.core import Config, checks, commands
 
