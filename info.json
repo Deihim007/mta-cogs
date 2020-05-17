@@ -1,7 +1,7 @@
 {
-    "AUTHOR" : "Deihim007",
-    "INSTALL_MSG" : "Multi Theft Auto Redbot Cogs.",
-    "NAME" : "MTA:SA Cogs",
-    "SHORT" : "MTA:SA cogs by Deihim007",
-    "DESCRIPTION" : "Multi Theft Auto Redbot Cogs."
+    "author" : "Deihim007",
+    "install_msg" : "Multi Theft Auto Redbot Cogs.",
+    "name" : "mta-cogs",
+    "short" : "MTA:SA cogs",
+    "description" : "Multi Theft Auto Redbot Cogs."
 }
