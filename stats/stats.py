@@ -42,7 +42,7 @@ class Stats(commands.Cog):
             top = sorted(ase.servers, key=lambda k: k['players'], reverse=True)[:10]
             embed = discord.Embed(colour=discord.Colour(0xf5a623), description="Multi Theft Auto Top Servers")
             for v in top:
-                embed.add_field(name="**"+v["name"]+"**", value=str(v["players"])+"/"+str(v["maxplayers"])), inline=False)
+                embed.add_field(name="**"+v["name"]+"**", value=str(v["players"])+"/"+str(v["maxplayers"]), inline=False)
             await ctx.channel.send(embed=embed)
             # for server in ase.servers:
             #     if peak < server.playersCount:
